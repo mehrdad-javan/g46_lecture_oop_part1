@@ -23,7 +23,9 @@ public class App {
 
         System.out.println(vwObj.carInfo());*/
 
-        Car volvoCar = new Car();
+
+
+        /*Car volvoCar = new Car();
         volvoCar.setBrand("Volvo");
         volvoCar.setModel("V60");
         volvoCar.setColor(null);
@@ -43,12 +45,22 @@ public class App {
         test.setLastName("Svensson");
 
         System.out.println(test.personInfo());
+         */
 
 
         /*Person anahita = new Person();
         System.out.println(anahita.getFirstName()); // null
         anahita.setFirstName("Anahita");
         System.out.println(anahita.getFirstName()); // Anahita*/
+
+
+        Person simon = new Person("Simon", "Elbrink", "123456-0000", 30);
+        Car volvo = new Car("VOLVO", "V70");
+
+        System.out.println(simon.personInfo());
+        System.out.println(volvo.carInfo());
+        volvo.setOwner(simon);
+        System.out.println(volvo.carInfo());
 
 
 

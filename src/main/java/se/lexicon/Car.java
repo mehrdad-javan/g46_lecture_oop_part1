@@ -11,8 +11,15 @@ public class Car {
     private String color;
     private Integer year;
     private double mileage;
+    private Person owner;
+
     //...
 
+
+    public Car(String brand, String model) {
+        this.brand = brand;
+        this.model = model;
+    }
 
     // Methods
     public void start() {
@@ -20,7 +27,21 @@ public class Car {
     }
 
     public String carInfo() {
-        return "Car { brand: " + brand + " , Model: " + model + "}";
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("Car { ");
+        stringBuilder.append(" brand:").append(brand);
+        stringBuilder.append(" model:").append(model);
+        if (owner != null) {
+            stringBuilder.append(" owner info:").append(owner.personInfo());
+        } else {
+            stringBuilder.append(" owner info: - ");
+        }
+        stringBuilder.append(" } ");
+
+
+        return stringBuilder.toString();
+
+        //return "Car { brand: " + brand + " , Model: " + model + "}";
     }
 
     public void drive(double distance) {
@@ -65,6 +86,15 @@ public class Car {
 
     public Integer getYear() {
         return year;
+    }
+
+
+    public void setOwner(Person owner) {
+        this.owner = owner;
+    }
+
+    public Person getOwner() {
+        return owner;
     }
 
     //...
