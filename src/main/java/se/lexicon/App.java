@@ -33,5 +33,24 @@ public class App {
         System.out.println(volvoCar.getColor()); // GRAY
 
 
+        System.out.println("---------------------------");
+
+        Person erik = new Person("Erik","Svensson", "123456-1111", 42, false);
+        System.out.println(erik.personInfo());
+
+        Person test = new Person("Test", "Testsson", "000000-0000",22);
+        test.setFirstName("Maria");
+        test.setLastName("Svensson");
+
+        System.out.println(test.personInfo());
+
+
+        /*Person anahita = new Person();
+        System.out.println(anahita.getFirstName()); // null
+        anahita.setFirstName("Anahita");
+        System.out.println(anahita.getFirstName()); // Anahita*/
+
+
+
     }
 }
